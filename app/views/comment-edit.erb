@@ -1,0 +1,7 @@
+<h1><a href="/">Comment</a></h1>
+
+<form action="/comment/<%=@comment.id%>" method="post">
+  <input type="hidden" name="_method" value="put"/>
+  <input type="text" name="content" value="<%=@comment.content%>"><br><br>
+  <input type="submit" value="Submit">
+</form>

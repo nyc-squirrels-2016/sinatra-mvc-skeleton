@@ -1,0 +1,29 @@
+<h1> Zanders Comments </h1>
+
+<% if logged_in?%>
+Welcome <%= current_user.username %>
+
+<% end %> <br> 
+
+<a href="/login">Login</a>
+<a href="/register">Register</a> <br><br>
+
+<a id="create" href="#">create</a> <br>
+
+<div id="create-container"></div>
+
+<div id="comment-container">
+
+<% @comments.reverse.each do |comment| %>
+
+<a class='like' id = "<%=comment.id%>" href="#"><%=comment.likes%> </a> 
+
+<a href= "/comment/<%= comment.id %>"> <%= comment.content %> </a>
+
+<br>
+
+<% end %> 
+
+</div>
+
+
