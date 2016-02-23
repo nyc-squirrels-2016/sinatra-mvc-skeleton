@@ -31,3 +31,10 @@ post '/register' do
   end
 end
 
+post '/logout' do
+  session.clear
+  redirect '/'
+end
+
+
+

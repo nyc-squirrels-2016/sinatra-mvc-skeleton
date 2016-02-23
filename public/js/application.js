@@ -34,6 +34,7 @@ $(document).ready(function() {
 		request.done(function(response){
 			link.text(response.likes);
 		});
+		
 		$("#create").show();
 	});
 
